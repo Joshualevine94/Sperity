@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ledger — know what you can actually spend</title>
+<meta name="description" content="A personal budgeting app that answers one question: can I spend this today without missing something before payday?">
+
+<!-- Open Graph, so a shared link looks like something rather than a bare URL -->
+<meta property="og:title" content="Ledger">
+<meta property="og:description" content="Know what you can actually spend before your next paycheck.">
+<meta property="og:type" content="website">
+
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+
+    --ink: #1C1A2E;
+    --ink-mid: #56516B;
+    --ink-dim: #8A8598;
+    --bg: #F6F5FA;
+    --surface: #FFFFFF;
+    --line: #EAE7F1;
+    --hero-a: #2A2740;
+    --hero-b: #171528;
+    --accent: #6B68B4;
+    --green: #3E8A6B;
+    --amber: #D98E5A;
+  }
+
+  :root:not([data-theme="light"]) { }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #EFECF6;
+      --ink-mid: #B3ADC4;
+      --ink-dim: #857E96;
+      --bg: #141221;
+      --surface: #1D1A2C;
+      --line: #2C2840;
+      --accent: #9A96DC;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ink: #EFECF6;
+    --ink-mid: #B3ADC4;
+    --ink-dim: #857E96;
+    --bg: #141221;
+    --surface: #1D1A2C;
+    --line: #2C2840;
+    --accent: #9A96DC;
+  }
+
+  * { box-sizing: inherit; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 22px; }
+
+  header {
+    background: linear-gradient(160deg, var(--hero-a), var(--hero-b));
+    color: #fff;
+    padding: 64px 0 72px;
+  }
+  header .wrap { max-width: 720px; }
+
+  .mark {
+    width: 54px; height: 54px; border-radius: 16px;
+    background: rgba(255,255,255,.12);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 26px;
+  }
+  .mark svg { display: block; }
+
+  h1 {
+    font-size: clamp(30px, 7vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -1.2px;
+    font-weight: 600;
+    margin: 0 0 14px;
+  }
+  header p {
+    font-size: clamp(16px, 3.6vw, 19px);
+    color: rgba(255,255,255,.78);
+    margin: 0;
+    max-width: 30em;
+  }
+
+  main { padding: 54px 0 70px; }
+
+  h2 {
+    font-size: 13px;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    font-weight: 600;
+    margin: 0 0 18px;
+  }
+
+  .lead {
+    font-size: clamp(17px, 4vw, 20px);
+    line-height: 1.55;
+    margin: 0 0 42px;
+    color: var(--ink);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin-bottom: 48px;
+  }
+
+  .card {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 14px rgba(28,26,46,.06);
+  }
+  .card h3 {
+    font-size: 16px;
+    margin: 0 0 7px;
+    font-weight: 600;
+  }
+  .card p {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--ink-mid);
+  }
+
+  .quiet {
+    color: var(--ink-mid);
+    font-size: 15.5px;
+  }
+
+  .rule { height: 1px; background: var(--line); margin: 44px 0; border: 0; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 30px 0 50px;
+    color: var(--ink-dim);
+    font-size: 14px;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer p { margin: 0 0 8px; }
+
+  .dot { color: var(--ink-dim); padding: 0 6px; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="mark" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+        <rect x="2" y="2" width="5" height="22" rx="2.5" fill="#F6F4FC"/>
+        <rect x="2" y="19" width="15" height="5" rx="2.5" fill="#F6F4FC"/>
+        <rect x="19.5" y="19" width="4.5" height="5" rx="2.2" fill="#EB925C"/>
+      </svg>
+    </div>
+    <h1>Know what you can actually spend</h1>
+    <p>A budgeting app for people paid every week or fortnight, built around
+       one question: can I spend this today without missing something before
+       payday?</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <p class="lead">
+      Most money apps tell you what you already spent. This one tells you what
+      is left once every bill between now and your next paycheck is accounted
+      for — the number that actually decides whether you can say yes to
+      something.
+    </p>
+
+    <h2>What it does</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Unspoken for</h3>
+        <p>What is in the bank, minus every bill, card payment and savings
+           contribution still to land before payday.</p>
+      </div>
+      <div class="card">
+        <h3>Thinks in pay periods</h3>
+        <p>Not calendar months. Rent on the 30th against a paycheck on the 2nd
+           is the problem worth solving.</p>
+      </div>
+      <div class="card">
+        <h3>Bills run themselves</h3>
+        <p>Enter something once and it repeats on whatever rhythm it actually
+           has — monthly, fortnightly, quarterly, certain weekdays.</p>
+      </div>
+      <div class="card">
+        <h3>Before you buy</h3>
+        <p>Put in an amount and see what it does to this pay period, the
+           month, and the three periods after it.</p>
+      </div>
+      <div class="card">
+        <h3>Your banks, optional</h3>
+        <p>Connect accounts and transactions arrive on their own, or import a
+           statement, or type things in. All three work.</p>
+      </div>
+      <div class="card">
+        <h3>Budgets that bite</h3>
+        <p>A budget can hold its money back, so setting some aside for petrol
+           stops it counting as spendable.</p>
+      </div>
+    </div>
+
+    <hr class="rule">
+
+    <h2>About your data</h2>
+    <p class="quiet">
+      Bank sign-in happens on your bank's own page. Neither this app nor its
+      server ever sees your bank username or password. Your financial data is
+      not sold, not used for advertising, and not shared with anyone for their
+      own purposes. There are no third-party trackers in the app, and no
+      analytics on how you use it.
+    </p>
+    <p class="quiet">
+      There is also a mode where nothing leaves your phone at all.
+    </p>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>
+      <a href="privacy.html">Privacy policy</a>
+      <span class="dot">·</span>
+      <a href="mailto:Joshualevine94@gmail.com">Joshualevine94@gmail.com</a>
+    </p>
+    <p>Bank connections provided by Plaid.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy policy — Ledger</title>
+<meta name="description" content="What Ledger collects, why, and what happens to it.">
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+
+    --ink: #1C1A2E;
+    --ink-mid: #56516B;
+    --ink-dim: #8A8598;
+    --bg: #F6F5FA;
+    --surface: #FFFFFF;
+    --line: #EAE7F1;
+    --hero-a: #2A2740;
+    --hero-b: #171528;
+    --accent: #6B68B4;
+    --green: #3E8A6B;
+    --amber: #D98E5A;
+  }
+
+  :root:not([data-theme="light"]) { }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #EFECF6;
+      --ink-mid: #B3ADC4;
+      --ink-dim: #857E96;
+      --bg: #141221;
+      --surface: #1D1A2C;
+      --line: #2C2840;
+      --accent: #9A96DC;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ink: #EFECF6;
+    --ink-mid: #B3ADC4;
+    --ink-dim: #857E96;
+    --bg: #141221;
+    --surface: #1D1A2C;
+    --line: #2C2840;
+    --accent: #9A96DC;
+  }
+
+  * { box-sizing: inherit; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 22px; }
+
+  header {
+    background: linear-gradient(160deg, var(--hero-a), var(--hero-b));
+    color: #fff;
+    padding: 64px 0 72px;
+  }
+  header .wrap { max-width: 720px; }
+
+  .mark {
+    width: 54px; height: 54px; border-radius: 16px;
+    background: rgba(255,255,255,.12);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 26px;
+  }
+  .mark svg { display: block; }
+
+  h1 {
+    font-size: clamp(30px, 7vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -1.2px;
+    font-weight: 600;
+    margin: 0 0 14px;
+  }
+  header p {
+    font-size: clamp(16px, 3.6vw, 19px);
+    color: rgba(255,255,255,.78);
+    margin: 0;
+    max-width: 30em;
+  }
+
+  main { padding: 54px 0 70px; }
+
+  h2 {
+    font-size: 13px;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    font-weight: 600;
+    margin: 0 0 18px;
+  }
+
+  .lead {
+    font-size: clamp(17px, 4vw, 20px);
+    line-height: 1.55;
+    margin: 0 0 42px;
+    color: var(--ink);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin-bottom: 48px;
+  }
+
+  .card {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 14px rgba(28,26,46,.06);
+  }
+  .card h3 {
+    font-size: 16px;
+    margin: 0 0 7px;
+    font-weight: 600;
+  }
+  .card p {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--ink-mid);
+  }
+
+  .quiet {
+    color: var(--ink-mid);
+    font-size: 15.5px;
+  }
+
+  .rule { height: 1px; background: var(--line); margin: 44px 0; border: 0; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 30px 0 50px;
+    color: var(--ink-dim);
+    font-size: 14px;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer p { margin: 0 0 8px; }
+
+  .dot { color: var(--ink-dim); padding: 0 6px; }
+</style>
+<style>
+  header { padding: 46px 0 50px; }
+  main p, main li { font-size: 16px; color: var(--ink-mid); }
+  main h2 {
+    font-size: 19px; text-transform: none; letter-spacing: -0.3px;
+    color: var(--ink); margin: 38px 0 12px; font-weight: 600;
+  }
+  main h2:first-of-type { margin-top: 0; }
+  main strong { color: var(--ink); font-weight: 600; }
+  main ul { padding-left: 20px; margin: 0 0 18px; }
+  main li { margin-bottom: 8px; }
+  main a { color: var(--accent); }
+  .updated { font-size: 14px !important; color: var(--ink-dim) !important; }
+  .back {
+    display: inline-block; margin-bottom: 22px;
+    color: rgba(255,255,255,.75); text-decoration: none; font-size: 14.5px;
+  }
+  .back:hover { color: #fff; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="back" href="index.html">&larr; Ledger</a>
+    <h1>Privacy policy</h1>
+    <p>What is collected, why, and what happens to it. Written to be read
+       rather than to protect anybody, so it is short.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="updated"><strong>Last updated: 28 September 2026</strong></p>
+    <p>This policy explains what Ledger collects, why, and what happens to it. It is written to be read rather than to protect anybody, so it is short.</p>
+    <h2>Who this is</h2>
+    <p>Ledger is a personal budgeting app. Questions, complaints or requests to delete your data: <strong><a href="mailto:Joshualevine94@gmail.com">Joshualevine94@gmail.com</a></strong>.</p>
+    <h2>What is collected</h2>
+    <p><strong>What you type in.</strong> Your bills, debts, savings goals, paychecks and the balances you enter. This is the app's whole purpose.</p>
+    <p><strong>Your email address and name</strong>, when you make an account, so you can sign in and be addressed properly.</p>
+    <p><strong>Bank transactions and balances</strong>, if and only if you connect a bank. This comes through Plaid, and covers the accounts you choose — transaction dates, amounts, merchant names, categories and balances.</p>
+    <p><strong>Nothing else.</strong> No advertising identifiers, no location, no contacts, no device fingerprinting, no analytics on how you use the app. There are no third-party trackers in it.</p>
+    <h2>What is never collected</h2>
+    <p><strong>Your bank username and password.</strong> Sign-in happens on your bank's own page through Plaid. Neither this app nor its server ever sees those credentials.</p>
+    <h2>Where it is kept</h2>
+    <p>Your bills and balances are stored in a Supabase database, encrypted at rest, under your account. Access is enforced by the database itself: every row belongs to a user, and a request for somebody else's rows returns nothing.</p>
+    <p>Bank access tokens are held server-side only, in a table the app has no permission to read. They never reach a phone.</p>
+    <p>A copy of your data is also kept on your own device so the app works without a signal.</p>
+    <p>All traffic uses HTTPS with TLS 1.2 or better.</p>
+    <h2>Who it is shared with</h2>
+    <p><strong>Nobody, for any commercial purpose.</strong> Your financial data is not sold, not rented, not used for advertising, and not shared with anyone for their own purposes.</p>
+    <p>Three services process data to make the app work:</p>
+    <ul>
+      <li><strong>Plaid</strong> connects your banks and supplies transactions. Their policy: <a href="https://plaid.com/legal">plaid.com/legal</a></li>
+      <li><strong>Supabase</strong> stores your account and data. Their policy: <a href="https://supabase.com/privacy">supabase.com/privacy</a></li>
+      <li><strong>Anthropic</strong> categorises merchants and reads PDF statements, *only if you turn AI features on*. Merchant names and figures are sent; your name, email and account identifiers are not. Their policy: <a href="https://anthropic.com/legal/privacy">anthropic.com/legal/privacy</a></li>
+    </ul>
+    <p><strong>Cloudflare</strong> runs the server that connects these together. It processes requests but stores nothing beyond the bank tokens described above.</p>
+    <h2>Your choices</h2>
+    <p><strong>AI features are off unless you turn them on.</strong> With them off, nothing is ever sent to Anthropic.</p>
+    <p><strong>Bank connections are optional.</strong> The app works entirely on manually entered figures and imported statements. Disconnecting a bank in the app also tells Plaid to delete the connection.</p>
+    <p><strong>An account is optional.</strong> There is a "use it on this phone only" choice, where nothing leaves the device at all.</p>
+    <h2>Deleting your data</h2>
+    <p>Erase all data in Settings removes everything from your device. To delete your account and everything stored on the server, email <strong><a href="mailto:Joshualevine94@gmail.com">Joshualevine94@gmail.com</a></strong> and it will be removed within 30 days, including telling Plaid to drop any bank connections.</p>
+    <h2>How long it is kept</h2>
+    <p>For as long as you have an account. Delete the account and it goes.</p>
+    <h2>Children</h2>
+    <p>Not intended for anyone under 18, and no data is knowingly collected from them.</p>
+    <h2>Changes</h2>
+    <p>If this policy changes materially you will be told in the app before the change takes effect.</p>
+    <h2>Contact</h2>
+    <p><strong><a href="mailto:Joshualevine94@gmail.com">Joshualevine94@gmail.com</a></strong></p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>
+      <a href="index.html">Back to Ledger</a>
+      <span class="dot">&middot;</span>
+      <a href="mailto:Joshualevine94@gmail.com">Joshualevine94@gmail.com</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
