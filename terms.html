@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icon-16.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terms of use — Sperity</title>
+<meta name="description" content="The terms for using Sperity, in plain words.">
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+
+    --ink: #1C1A2E;
+    --ink-mid: #56516B;
+    --ink-dim: #8A8598;
+    --bg: #F6F5FA;
+    --surface: #FFFFFF;
+    --line: #EAE7F1;
+    --hero-a: #2A2740;
+    --hero-b: #171528;
+    --accent: #6B68B4;
+    --green: #3E8A6B;
+    --amber: #D98E5A;
+  }
+
+  :root:not([data-theme="light"]) { }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #EFECF6;
+      --ink-mid: #B3ADC4;
+      --ink-dim: #857E96;
+      --bg: #141221;
+      --surface: #1D1A2C;
+      --line: #2C2840;
+      --accent: #9A96DC;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ink: #EFECF6;
+    --ink-mid: #B3ADC4;
+    --ink-dim: #857E96;
+    --bg: #141221;
+    --surface: #1D1A2C;
+    --line: #2C2840;
+    --accent: #9A96DC;
+  }
+
+  * { box-sizing: inherit; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 22px; }
+
+  header {
+    background: linear-gradient(160deg, var(--hero-a), var(--hero-b));
+    color: #fff;
+    padding: 64px 0 72px;
+  }
+  header .wrap { max-width: 720px; }
+
+  .mark {
+    width: 54px; height: 54px; border-radius: 16px;
+    background: rgba(255,255,255,.12);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 26px;
+  }
+  .mark svg { display: block; }
+
+  h1 {
+    font-size: clamp(30px, 7vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -1.2px;
+    font-weight: 600;
+    margin: 0 0 14px;
+  }
+  header p {
+    font-size: clamp(16px, 3.6vw, 19px);
+    color: rgba(255,255,255,.78);
+    margin: 0;
+    max-width: 30em;
+  }
+
+  main { padding: 54px 0 70px; }
+
+  h2 {
+    font-size: 13px;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    font-weight: 600;
+    margin: 0 0 18px;
+  }
+
+  .lead {
+    font-size: clamp(17px, 4vw, 20px);
+    line-height: 1.55;
+    margin: 0 0 42px;
+    color: var(--ink);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin-bottom: 48px;
+  }
+
+  .card {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 14px rgba(28,26,46,.06);
+  }
+  .card h3 {
+    font-size: 16px;
+    margin: 0 0 7px;
+    font-weight: 600;
+  }
+  .card p {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--ink-mid);
+  }
+
+  .quiet {
+    color: var(--ink-mid);
+    font-size: 15.5px;
+  }
+
+  .rule { height: 1px; background: var(--line); margin: 44px 0; border: 0; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 30px 0 50px;
+    color: var(--ink-dim);
+    font-size: 14px;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer p { margin: 0 0 8px; }
+
+  .dot { color: var(--ink-dim); padding: 0 6px; }
+</style>
+<style>
+  header { padding: 46px 0 50px; }
+  main p, main li { font-size: 16px; color: var(--ink-mid); }
+  main h2 {
+    font-size: 19px; text-transform: none; letter-spacing: -0.3px;
+    color: var(--ink); margin: 38px 0 12px; font-weight: 600;
+  }
+  main h2:first-of-type { margin-top: 0; }
+  main strong { color: var(--ink); font-weight: 600; }
+  main ul { padding-left: 20px; margin: 0 0 18px; }
+  main li { margin-bottom: 8px; }
+  main a { color: var(--accent); }
+  .updated { font-size: 14px !important; color: var(--ink-dim) !important; }
+  .back {
+    display: inline-block; margin-bottom: 22px;
+    color: rgba(255,255,255,.75); text-decoration: none; font-size: 14.5px;
+  }
+  .back:hover { color: #fff; }
+  main table { width:100%; border-collapse:collapse; margin:0 0 20px; font-size:15px; }
+  main th { text-align:left; padding:8px 10px 8px 0; color:var(--ink); font-weight:600;
+            border-bottom:1px solid var(--line); font-size:14px; }
+  main td { padding:9px 10px 9px 0; color:var(--ink-mid);
+            border-bottom:1px solid var(--line); vertical-align:top; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="back" href="index.html">&larr; Sperity</a>
+    <h1>Terms of use</h1>
+    <p>Written to be read, so they are short and in plain words. Sperity shows
+       you your own numbers — it is not your bank, not an adviser, and the
+       figures in it are estimates.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="updated"><strong>Last updated: 2 October 2026</strong></p>
+    <p>These are the terms for using Sperity. They are written to be read, so they are short and in plain words. Using the app means agreeing to them.</p>
+    <p><strong>In one sentence:</strong> Sperity shows you your own numbers and helps you think about them. It is not your bank, not your accountant, and not an adviser, and the figures in it are estimates based on what you and your bank tell it.</p>
+    <h2>1. Who provides this</h2>
+    <p>Sperity is made and operated by Joshua Levine, a sole proprietor.</p>
+    <p>Contact: <strong><a href="mailto:Sperityapp@gmail.com">Sperityapp@gmail.com</a></strong></p>
+    <h2>2. Who can use it</h2>
+    <p>You must be <strong>18 or over</strong>. The app is not designed for children and no data is knowingly collected from them.</p>
+    <p>You need your own account. Do not share your sign-in. If you share a household with someone, each of you keeps a separate sign-in.</p>
+    <h2>3. What this is not</h2>
+    <p><strong>Not financial advice.</strong> Nothing in the app is a recommendation about what to do with your money. Projections, payoff plans, budgets and written summaries are arithmetic and observations, not advice. If you need advice, speak to someone qualified to give it.</p>
+    <p><strong>Not a bank.</strong> Sperity holds no money and cannot move any. It cannot make a payment, transfer funds, or stop a payment going out.</p>
+    <p><strong>Not a source of truth about your accounts.</strong> Your bank is. Where the app and your bank disagree, your bank is right.</p>
+    <h2>4. The figures are estimates</h2>
+    <p>Everything the app projects — what you can spend, when a pot will be full, when a debt clears, whether you run short before payday — is calculated from what you have entered and what your bank has reported. It is as good as that information and no better.</p>
+    <p>Specifically:</p>
+    <ul>
+      <li>Bank data arrives through Plaid and may be delayed, incomplete, or wrong. Pending transactions change. Some accounts do not report at all.</li>
+      <li>A projection assumes bills recur as entered. A changed amount, a missed entry or an unexpected charge changes the answer.</li>
+      <li>AI features make mistakes. A merchant can be put in the wrong category and a PDF can be read incorrectly. Everything suggested is shown to you before it is saved, and it is worth checking.</li>
+    </ul>
+    <p><strong>Do not rely on the app alone for a decision that matters.</strong> Check your bank before anything with a consequence — a large purchase, a payment you cannot miss, a transfer you cannot reverse.</p>
+    <h2>5. What you are responsible for</h2>
+    <ul>
+      <li>The accuracy of what you enter.</li>
+      <li>Keeping your password and two-factor codes safe, and your backup codes somewhere you will find them.</li>
+      <li>Checking that automatic categorisation and imported bills are right before acting on them.</li>
+      <li>Your own money. Every financial decision is yours.</li>
+    </ul>
+    <h2>6. What we are responsible for</h2>
+    <p>Running the service with reasonable care, protecting your data as described in the privacy policy, and being honest with you about what the app does and does not do.</p>
+    <p><strong>Nothing in these terms limits liability for anything that cannot lawfully be limited</strong> — including fraud, gross negligence, death or personal injury caused by negligence, or your rights as a consumer under the law where you live. Those rights exist regardless of what any agreement says, including this one.</p>
+    <h2>7. What we are not responsible for</h2>
+    <p>Subject to §6, and to the fullest extent the law allows:</p>
+    <ul>
+      <li><strong>Decisions you make.</strong> If a projection influences a purchase and the purchase turns out badly, that is not something this app can carry.</li>
+      <li><strong>Charges from your bank.</strong> Overdraft fees, missed payment charges, interest and declined transactions are between you and your bank.</li>
+      <li><strong>Data from third parties.</strong> If Plaid reports a wrong balance, or your bank returns stale information, the app shows what it was given.</li>
+      <li><strong>Interruptions.</strong> The service may be unavailable, and a bank connection may break. Neither is guaranteed.</li>
+      <li><strong>Loss of data</strong>, where you have not kept a backup. The app can make one at any time and encourages it.</li>
+    </ul>
+    <p><strong>The service is provided as it is.</strong> There is no warranty that it will be uninterrupted, error-free, or fit for a particular purpose beyond what is described here.</p>
+    <p><strong>Where liability can lawfully be limited, it is limited to what you have paid for the service</strong> — which, at present, is nothing.</p>
+    <h2>8. Third parties</h2>
+    <p>The app works with Plaid for bank connections, Supabase for accounts and storage, Cloudflare for its server, and Anthropic for optional AI features. Each has its own terms, and connecting a bank means accepting Plaid's.</p>
+    <p>These are suppliers, not partners, and none of them is given your data for their own purposes. The privacy policy says exactly what each receives.</p>
+    <h2>9. Acceptable use</h2>
+    <p>Do not attempt to access anyone else's account or data, interfere with the service, use it to break the law, or resell it as your own.</p>
+    <p>Access may be suspended for any of the above. Where it is reasonable to do so, you will be told why and given a chance to put it right.</p>
+    <h2>10. Ending it</h2>
+    <p><strong>You can stop at any time.</strong> Delete the app, or email <strong><a href="mailto:Sperityapp@gmail.com">Sperityapp@gmail.com</a></strong> to delete your account and everything held on the server — done within 30 days, usually the same day.</p>
+    <p><strong>The service may be discontinued.</strong> Should that happen you will be given at least <strong>30 days' notice</strong> and the ability to export everything, so you leave with your data rather than losing it.</p>
+    <h2>11. Changes to these terms</h2>
+    <p>If these terms change materially you will be told in the app before the change takes effect, and asked to agree again. Your agreement is recorded with the version, so an earlier agreement is never treated as agreement to something later.</p>
+    <p>Continuing to use the app after a change means accepting it. If you do not accept, you can delete your account, and your data goes with it.</p>
+    <h2>12. Law</h2>
+    <p>These terms are governed by the laws of the State of New York, United States. This does not remove any protection you have under the law of the country you live in.</p>
+    <h2>13. If something is unenforceable</h2>
+    <p>If any part of these terms is found unenforceable, the rest still applies.</p>
+    <p><strong>Questions:</strong> <a href="mailto:Sperityapp@gmail.com">Sperityapp@gmail.com</a></p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>
+      <a href="index.html">Back to Sperity</a>
+      <span class="dot">&middot;</span>
+      <a href="mailto:Sperityapp@gmail.com">Sperityapp@gmail.com</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
