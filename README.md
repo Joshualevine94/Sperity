@@ -8,7 +8,7 @@ Plaid for both "website" and "privacy policy".
 1. Make a free account at **github.com** if you have not got one.
 
 2. Click **+** (top right) → **New repository**.
-   - Name it `ledger` (or whatever you call the app)
+   - Name it `sperity` — the name becomes part of the address, and it is case-sensitive
    - Choose **Public** — Pages needs this on a free account
    - Tick **Add a README file**
    - **Create repository**
@@ -23,7 +23,7 @@ Plaid for both "website" and "privacy policy".
    like:
 
    ```
-   https://yourusername.github.io/ledger/
+   https://yourusername.github.io/sperity/
    ```
 
    The policy is that address with `privacy.html` on the end.
@@ -39,7 +39,7 @@ Plaid requires the policy to stay reachable, so leave the repository public.
 
 Open the file on GitHub, click the pencil icon, edit, commit. Live within a
 minute. The name appears in a handful of places in each file — a find and
-replace for "Ledger" is all a rename takes.
+replace for "Sperity" is all a rename takes.
 
 ## A real domain, later
 
