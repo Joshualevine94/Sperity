@@ -172,6 +172,11 @@
     color: rgba(255,255,255,.75); text-decoration: none; font-size: 14.5px;
   }
   .back:hover { color: #fff; }
+  main table { width:100%; border-collapse:collapse; margin:0 0 20px; font-size:15px; }
+  main th { text-align:left; padding:8px 10px 8px 0; color:var(--ink); font-weight:600;
+            border-bottom:1px solid var(--line); font-size:14px; }
+  main td { padding:9px 10px 9px 0; color:var(--ink-mid);
+            border-bottom:1px solid var(--line); vertical-align:top; }
 </style>
 </head>
 
@@ -191,7 +196,7 @@
     <p class="updated"><strong>Last updated: 28 September 2026</strong></p>
     <p>This policy explains what Sperity collects, why, and what happens to it. It is written to be read rather than to protect anybody, so it is short.</p>
     <h2>Who this is</h2>
-    <p>Sperity is a personal budgeting app. Questions, complaints or requests to delete your data: <strong><a href="mailto:Joshualevine94@gmail.com">Joshualevine94@gmail.com</a></strong>.</p>
+    <p>Sperity is a personal budgeting app. Questions, complaints or requests to delete your data: <strong><a href="mailto:Sperityapp@gmail.com">Sperityapp@gmail.com</a></strong>.</p>
     <h2>What is collected</h2>
     <p><strong>What you type in.</strong> Your bills, debts, savings goals, paychecks and the balances you enter. This is the app's whole purpose.</p>
     <p><strong>Your email address and name</strong>, when you make an account, so you can sign in and be addressed properly.</p>
@@ -210,23 +215,40 @@
     <ul>
       <li><strong>Plaid</strong> connects your banks and supplies transactions. Their policy: <a href="https://plaid.com/legal">plaid.com/legal</a></li>
       <li><strong>Supabase</strong> stores your account and data. Their policy: <a href="https://supabase.com/privacy">supabase.com/privacy</a></li>
-      <li><strong>Anthropic</strong> categorises merchants and reads PDF statements, *only if you turn AI features on*. Merchant names and figures are sent; your name, email and account identifiers are not. Their policy: <a href="https://anthropic.com/legal/privacy">anthropic.com/legal/privacy</a></li>
+      <li><strong>Anthropic</strong> categorises merchants and reads PDF statements, <em>only if you turn AI features on</em>. Merchant names and figures are sent; your name, email and account identifiers are not. Their policy: <a href="https://anthropic.com/legal/privacy">anthropic.com/legal/privacy</a></li>
     </ul>
     <p><strong>Cloudflare</strong> runs the server that connects these together. It processes requests but stores nothing beyond the bank tokens described above.</p>
+    <h2>Your rights</h2>
+    <p>These apply wherever you are. Several of them you can exercise yourself, without asking anyone.</p>
+    <p><strong>See what is held.</strong> Everything about you is visible in the app — your bills, balances, transactions and categories. Settings shows your account details and your consent record: what you agreed to, which version, and when.</p>
+    <p><strong>Take a copy.</strong> Backups in the app produce a complete file of your data that you keep. No request, no waiting, no format anyone else controls.</p>
+    <p><strong>Correct anything.</strong> Every figure in the app is editable. A transaction's category, a bill's amount, your balance, your name — all of it can be changed by you at any time, and a correction you make always wins over an imported or suggested value.</p>
+    <p><strong>Delete it.</strong> <em>Erase all data</em> in Settings clears this device immediately. To delete your account and everything held on the server, email <strong><a href="mailto:Sperityapp@gmail.com">Sperityapp@gmail.com</a></strong>; it is done within 30 days, usually the same day.</p>
+    <p><strong>Withdraw consent.</strong> Each of the three is separate and reversible:</p>
+    <table>
+      <tr><th>What you agreed to</th><th>Withdraw by</th><th>What happens</th></tr>
+      <tr><td>Connecting a bank</td><td>Disconnecting it in the app</td><td>The stored token is deleted and Plaid is told to end the access</td></tr>
+      <tr><td>AI features</td><td>Turning them off</td><td>Nothing is sent to Anthropic again</td></tr>
+      <tr><td>Using the app at all</td><td>Deleting your account</td><td>Everything is removed within 30 days</td></tr>
+    </table>
+    <p><strong>Object to how it is used.</strong> There is nothing to object to: your data is not sold, not profiled, not used for advertising, and not shared for anyone else's purposes. If that ever changed you would be told before it took effect, not after.</p>
+    <p><strong>Complain.</strong> Email <strong><a href="mailto:Sperityapp@gmail.com">Sperityapp@gmail.com</a></strong> first. If you are in the UK or EU and unsatisfied, you may complain to your national data protection authority; in the UK that is the Information Commissioner's Office.</p>
+    <p>None of these requires a reason, and using one will never affect how the app treats you.</p>
     <h2>Your choices</h2>
     <p><strong>AI features are off unless you turn them on.</strong> With them off, nothing is ever sent to Anthropic.</p>
     <p><strong>Bank connections are optional.</strong> The app works entirely on manually entered figures and imported statements. Disconnecting a bank in the app also tells Plaid to delete the connection.</p>
     <p><strong>An account is optional.</strong> There is a "use it on this phone only" choice, where nothing leaves the device at all.</p>
     <h2>Deleting your data</h2>
-    <p>Erase all data in Settings removes everything from your device. To delete your account and everything stored on the server, email <strong><a href="mailto:Joshualevine94@gmail.com">Joshualevine94@gmail.com</a></strong> and it will be removed within 30 days, including telling Plaid to drop any bank connections.</p>
+    <p>Erase all data in Settings removes everything from your device. To delete your account and everything stored on the server, email <strong><a href="mailto:Sperityapp@gmail.com">Sperityapp@gmail.com</a></strong> and it will be removed within 30 days, including telling Plaid to drop any bank connections.</p>
     <h2>How long it is kept</h2>
     <p>For as long as you have an account. Delete the account and it goes.</p>
     <h2>Children</h2>
     <p>Not intended for anyone under 18, and no data is knowingly collected from them.</p>
     <h2>Changes</h2>
-    <p>If this policy changes materially you will be told in the app before the change takes effect.</p>
+    <p>If this policy changes materially you will be told in the app before the change takes effect, and asked to agree again. Consent records keep the version you agreed to, so an earlier agreement is never treated as agreement to something later.</p>
+    <p>This policy is reviewed annually and whenever what is collected, where it is stored, or which processors are involved changes.</p>
     <h2>Contact</h2>
-    <p><strong><a href="mailto:Joshualevine94@gmail.com">Joshualevine94@gmail.com</a></strong></p>
+    <p><strong><a href="mailto:Sperityapp@gmail.com">Sperityapp@gmail.com</a></strong></p>
   </div>
 </main>
 
@@ -235,7 +257,7 @@
     <p>
       <a href="index.html">Back to Sperity</a>
       <span class="dot">&middot;</span>
-      <a href="mailto:Joshualevine94@gmail.com">Joshualevine94@gmail.com</a>
+      <a href="mailto:Sperityapp@gmail.com">Sperityapp@gmail.com</a>
     </p>
   </div>
 </footer>
