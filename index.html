@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Sperity — know what you can actually spend</title>
-<meta name="description" content="A personal budgeting app that answers one question: can I spend this today without missing something before payday?">
+<title>Sperity — you run the house, this runs the numbers</title>
+<meta name="description" content="Every bill, every payday, every account in one place. Know what you can actually spend, before you spend it.">
 
 <!-- Open Graph, so a shared link looks like something rather than a bare URL -->
 <meta property="og:title" content="Sperity">
-<meta property="og:description" content="Know what you can actually spend before your next paycheck.">
+<meta property="og:description" content="Every bill, every payday, every account in one place.">
 <meta property="og:type" content="website">
 
 <style>
@@ -76,12 +79,10 @@
   header .wrap { max-width: 720px; }
 
   .mark {
-    width: 54px; height: 54px; border-radius: 16px;
-    background: rgba(255,255,255,.12);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 26px;
+    width: 62px; height: 62px; border-radius: 18px;
+    display: block; margin-bottom: 26px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.22);
   }
-  .mark svg { display: block; }
 
   h1 {
     font-size: clamp(30px, 7vw, 44px);
@@ -164,17 +165,10 @@
 
 <header>
   <div class="wrap">
-    <div class="mark" aria-hidden="true">
-      <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-        <rect x="2" y="2" width="5" height="22" rx="2.5" fill="#F6F4FC"/>
-        <rect x="2" y="19" width="15" height="5" rx="2.5" fill="#F6F4FC"/>
-        <rect x="19.5" y="19" width="4.5" height="5" rx="2.2" fill="#EB925C"/>
-      </svg>
-    </div>
-    <h1>Know what you can actually spend</h1>
-    <p>A budgeting app for people paid every week or fortnight, built around
-       one question: can I spend this today without missing something before
-       payday?</p>
+    <img class="mark" src="icon-180.png" alt="" width="62" height="62">
+    <h1>You run the house.<br>This runs the numbers.</h1>
+    <p>Every bill, every payday, every account — in one place, answering the
+       only question that matters: what can I actually spend right now?</p>
   </div>
 </header>
 
@@ -182,10 +176,10 @@
   <div class="wrap">
 
     <p class="lead">
-      Most money apps tell you what you already spent. This one tells you what
-      is left once every bill between now and your next paycheck is accounted
-      for — the number that actually decides whether you can say yes to
-      something.
+      Most money apps are a rear-view mirror — here is what you spent, try
+      harder next month. Sperity looks forward instead. It knows what is
+      coming out before your next paycheck, so the number on the front screen
+      is the one that actually decides whether you can say yes to something.
     </p>
 
     <h2>What it does</h2>
