@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Returning to Sperity…</title>
+
+<!--
+  A bounce page.
+
+  Some banks — the large ones using OAuth — insist on returning to an https
+  address rather than an app's own scheme. This is that address: it exists
+  only to hand control straight back to the app, carrying whatever Plaid
+  appended to the URL.
+
+  Nothing is read here, nothing is stored, and no request leaves the page.
+-->
+<script>
+  (function () {
+    var target = 'sperity://plaid' + (window.location.search || '')
+      + (window.location.hash || '');
+    // replace(), not assign(), so the back button does not land here again
+    window.location.replace(target);
+    setTimeout(function () {
+      document.getElementById('slow').style.display = 'block';
+    }, 2500);
+  })();
+</script>
+
+<style>
+  :root { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: inherit; }
+  body {
+    margin: 0; min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    background: #FCCE8A;
+    color: #2A2740;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    text-align: center; padding: 24px; line-height: 1.6;
+  }
+  .wrap { max-width: 22em; }
+  img { width: 64px; height: 64px; border-radius: 18px; margin-bottom: 20px; }
+  h1 { font-size: 20px; margin: 0 0 8px; font-weight: 600; }
+  p { margin: 0; font-size: 15px; color: #5A5468; }
+  #slow { display: none; margin-top: 22px; }
+  a {
+    display: inline-block; margin-top: 10px; padding: 11px 20px;
+    background: #2A2740; color: #fff; border-radius: 12px;
+    text-decoration: none; font-size: 15px; font-weight: 600;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <img src="icon-180.png" alt="">
+    <h1>Taking you back to Sperity</h1>
+    <p>One moment.</p>
+    <div id="slow">
+      <p>If nothing happened, tap below.</p>
+      <a href="sperity://plaid">Open Sperity</a>
+    </div>
+  </div>
+</body>
+</html>
